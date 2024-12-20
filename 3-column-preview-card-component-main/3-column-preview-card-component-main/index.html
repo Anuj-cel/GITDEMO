@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+
+  <style>
+    /* Lexend Deca */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+    /* Big Shoulders Display */
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 20px;
+      font-family: Lexend Deca;
+    }
+
+    .main {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .card1 {
+
+      background-color: hsl(31, 77%, 52%);
+      width: 305px;
+      padding: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: wheat;
+      font-weight: 400;
+    }
+
+    .logo {}
+
+    .d1 {
+      margin-top: 30px;
+      font-size: 50px;
+      font-family: Big Shoulders Display;
+      font-weight: 700;
+    }
+
+    .d2 {
+      margin-top: 30px;
+
+    }
+
+    .d3 {
+      border: solid white 2px;
+      border-radius: 30px;
+      padding: 11px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 100px;
+    }
+
+    .card2 {
+      background-color: hsl(184, 100%, 22%);
+      width: 305px;
+      padding: 56.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: wheat;
+      font-weight: 400;
+    }
+
+    .card3 {
+      background-color: hsl(179, 100%, 13%);
+      width: 305px;
+      padding: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: wheat;
+      font-weight: 400;
+    }
+
+    @media screen and (max-width: 670px) {
+
+
+      .card {
+        flex-direction: column;
+      }
+
+      .card1,
+      .card2,
+      .card3 {
+        width: 100%;
+        padding: 32px;
+      }
+
+      .d1 {
+        margin-top: 20px;
+      }
+
+      .d2 {
+        margin-top: 25px;
+      }
+
+      .card1 .d3 , .card2 .d3 , .card3 .d3 {
+        border: solid white 2px;
+        border-radius: 30px;
+        padding: 15px 20px;
+
+        cursor: pointer;
+        margin-top: 60px;
+        width: max-content;
+        background: white;
+        color: hsl(31, 77%, 52%);
+      }
+
+      .card2 .d3 {
+        color: hsl(184, 100%, 22%);
+      }
+
+      .card3 .d3 {
+        color: hsl(179, 100%, 13%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="card">
+      <div class="card1">
+        <div class="Logo"><img src="images/icon-sedans.svg" alt=""></div>
+        <div class="d1">Sedans</div>
+        <div class="d2"> Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+          or on your next road trip.</div>
+        <div class="d3">Learn More</div>
+
+
+      </div>
+      <div class="card2">
+        <div class="Logo"><img src="images/icon-suvs.svg" alt=""></div>
+        <div class="d1">Suvs</div>
+        <div class="d2"> Take an SUV for its spacious interior, power, and versatility. Perfect for your next family
+          vacation
+          and off-road adventures.</div>
+        <div class="d3">Learn More</div>
+
+      </div>
+      <div class="card3">
+        <div class="Logo"><img src="images/icon-luxury.svg" alt=""></div>
+        <div class="d1">Luxury</div>
+        <div class="d2"> Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a
+          luxury
+          rental and arrive in style.</div>
+        <div class="d3">Learn More</div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- SUVs
+  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.
+
+  Luxury
+  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style.
+   -->
+
+</body>
+
+</html>
